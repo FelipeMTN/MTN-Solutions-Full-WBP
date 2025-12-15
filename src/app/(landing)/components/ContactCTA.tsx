@@ -85,16 +85,18 @@ export const ContactCTA = () => {
               Ready to transform your business
               <Text onBackground="brand-medium">?</Text>
             </Heading>
-            <Text
-              align="center"
-              wrap="balance"
-              variant="body-default-xl"
-              onBackground="neutral-medium"
-              maxWidth="m"
-            >
-              Let's discuss your challenges and create a custom solution that
-              drives real results for your business.
-            </Text>
+            {/* FIXED: Wrapped Text in Column to handle maxWidth */}
+            <Column maxWidth="m" horizontal="center">
+              <Text
+                align="center"
+                wrap="balance"
+                variant="body-default-xl"
+                onBackground="neutral-medium"
+              >
+                Let's discuss your challenges and create a custom solution that
+                drives real results for your business.
+              </Text>
+            </Column>
           </Column>
           <Row
             position="absolute"
@@ -167,16 +169,18 @@ export const ContactCTA = () => {
             <Heading variant="display-strong-s" align="center">
               Multiple ways to connect
             </Heading>
-            <Text
-              wrap="balance"
-              onBackground="neutral-medium"
-              variant="body-default-l"
-              align="center"
-              maxWidth="m"
-            >
-              Choose the method that works best for you. We're here to help
-              bring your vision to life.
-            </Text>
+            {/* FIXED: Wrapped Text in Column to handle maxWidth */}
+            <Column maxWidth="m" horizontal="center">
+              <Text
+                wrap="balance"
+                onBackground="neutral-medium"
+                variant="body-default-l"
+                align="center"
+              >
+                Choose the method that works best for you. We're here to help
+                bring your vision to life.
+              </Text>
+            </Column>
           </Column>
 
           <Grid columns={3} s={{ columns: 1 }} gap="24">
