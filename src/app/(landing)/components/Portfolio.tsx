@@ -116,17 +116,20 @@ export const Portfolio = ({ ...flex }: React.ComponentProps<typeof Column>) => {
           <Heading as="h2" variant="display-strong-m" align="center">
             Proven results across industries
           </Heading>
-          <Text
-            wrap="balance"
-            variant="body-default-xl"
-            onBackground="neutral-medium"
-            marginBottom="12"
-            align="center"
-            maxWidth="m"
-          >
-            See how we've helped businesses like yours overcome challenges and
-            achieve remarkable growth through our comprehensive solutions.
-          </Text>
+          
+          {/* FIXED: Wrapped Text in Column to handle maxWidth */}
+          <Column maxWidth="m" horizontal="center">
+            <Text
+              wrap="balance"
+              variant="body-default-xl"
+              onBackground="neutral-medium"
+              marginBottom="12"
+              align="center"
+            >
+              See how we've helped businesses like yours overcome challenges and
+              achieve remarkable growth through our comprehensive solutions.
+            </Text>
+          </Column>
         </Column>
 
         <Grid
