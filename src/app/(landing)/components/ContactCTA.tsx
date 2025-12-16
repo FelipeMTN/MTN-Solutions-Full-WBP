@@ -85,7 +85,6 @@ export const ContactCTA = () => {
               Ready to transform your business
               <Text onBackground="brand-medium">?</Text>
             </Heading>
-            {/* FIXED: Wrapped Text in Column to handle maxWidth */}
             <Column maxWidth="m" horizontal="center">
               <Text
                 align="center"
@@ -169,7 +168,6 @@ export const ContactCTA = () => {
             <Heading variant="display-strong-s" align="center">
               Multiple ways to connect
             </Heading>
-            {/* FIXED: Wrapped Text in Column to handle maxWidth */}
             <Column maxWidth="m" horizontal="center">
               <Text
                 wrap="balance"
@@ -317,14 +315,12 @@ export const ContactCTA = () => {
                     placeholder="Your Name"
                     id="contact-name"
                     type="text"
-                    fillWidth
                     required
                   />
                   <Input
                     placeholder="Your Email"
                     id="contact-email"
                     type="email"
-                    fillWidth
                     required
                   />
                 </Row>
@@ -332,7 +328,6 @@ export const ContactCTA = () => {
                   placeholder="Project Description"
                   id="contact-message"
                   type="text"
-                  fillWidth
                   required
                 />
                 <Button fillWidth id="contact-form-button" arrowIcon>
