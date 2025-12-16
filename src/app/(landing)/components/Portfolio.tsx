@@ -117,7 +117,6 @@ export const Portfolio = ({ ...flex }: React.ComponentProps<typeof Column>) => {
             Proven results across industries
           </Heading>
           
-          {/* FIXED: Wrapped Text in Column to handle maxWidth */}
           <Column maxWidth="m" horizontal="center">
             <Text
               wrap="balance"
@@ -172,19 +171,24 @@ export const Portfolio = ({ ...flex }: React.ComponentProps<typeof Column>) => {
                 >
                   {item.description}
                 </Text>
+                {/* FIXED: Wrapped tags in Row to handle radius/background */}
                 <Row gap="8" wrap marginTop="8">
                   {item.tags.map((tag, tagIndex) => (
-                    <Text
+                    <Row
                       key={tagIndex}
-                      variant="body-default-xs"
                       padding="4"
                       paddingX="8"
                       radius="full"
                       background="neutral-alpha-weak"
-                      onBackground="neutral-weak"
+                      vertical="center"
                     >
-                      {tag}
-                    </Text>
+                      <Text
+                        variant="body-default-xs"
+                        onBackground="neutral-weak"
+                      >
+                        {tag}
+                      </Text>
+                    </Row>
                   ))}
                 </Row>
               </Column>
